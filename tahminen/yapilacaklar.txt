@@ -1,0 +1,16 @@
+
+Docker FREEZE
+----------------
+ps axf | grep docker | grep -v grep | awk '{print "kill -9 " $1}' | sudo sh 
+
+I was then able to restart docker using:
+
+sudo systemctl start docker
+
+Kaynak: https://stackoverflow.com/questions/43537790/docker-fails-to-start-due-to-volume-store-metadata-database-timeout
+
+
+----
+TODO:
+1) Tahmin kaynağı tahmini ne zaman yaptığını bilmiyoruz. Sayfa ziyaret anı kayıt_tarih'te tahmin zaten yapılmıştı.
+2)
