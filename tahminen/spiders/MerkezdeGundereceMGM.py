@@ -21,6 +21,10 @@ class MerkezdegunderecemgmSpider(scrapy.Spider):
                merkez['isim'] = row[1]
                merkez['isimUzun'] = row[2]
                merkez['ilMerkezi'] = False
+               if row[3]=='kafz':
+                 merkez['kafz'] = True
+               else
+                 merkez['kafz'] = False
                self.merkezler.append(merkez)
                url = self.mgm_anaurl + '' + merkez['isim']
                yield SplashRequest(url, callback = self.parse, 

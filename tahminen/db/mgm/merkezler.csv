@@ -1,81 +1,81 @@
-1,"Adana","Adana Seyhan, ADANA ŞAKİRPAŞA HAVALİMANI"
-2,"Adiyaman","Adıyaman, Merkez, ADIYAMAN"
-3,"Afyonkarahisar","Afyonkarahisar, Merkez, AFYONKARAHİSAR BÖLGE"
-4,"Agr"i,"Ağrı, Merkez, AĞRI"
-5,"Amasya","Amasya, Merkez, AMASYA"
-6,"Ankara","Ankara, Çankaya, ÇANKAYA/TBMM"
-7,"Antalya","Antalya, Muratpaşa, ANTALYA BÖLGE"
-8,"Artvin","Artvin, Merkez, ARTVİN"
-9,"Aydin","Aydın, Efeler, AYDIN"
-10,"Balikesir","Balıkesir, Altıeylül, ALTIEYLÜL"
-11,"Bilecik","Bilecik, Merkez, BİLECİK"
-12,"Bingol","Bingöl, Merkez, BİNGÖL"
-13,"Bitlis","Bitlis, Merkez, BİTLİS"
-14,"Bolu","Bolu, Merkez, BOLU"
-15,"Burdur","Burdur, Merkez, BURDUR"
-16,"Bursa","Bursa, Nilüfer, NİLÜFER"
-17,"Canakkale","Çanakkale, Merkez, ÇANAKKALE"
-18,"Cankiri","Çankırı, Merkez, ÇANKIRI"
-19,"Corum","Çorum, Merkez, ÇORUM"
-20,"Denizli","Denizli, Pamukkale, DENİZLİ"
-21,"Diyarbakir","Diyarbakır, Bağlar, DİYARBAKIR BÖLGE"
-22,"Edirne","Edirne, Merkez, EDİRNE"
-23,"Elazig","Elazığ, Merkez, ELAZIĞ BÖLGE"
-24,"Erzincan","Erzincan, Merkez, ERZİNCAN"
-25,"Erzurum","Erzurum, Yakutiye, ERZURUM BÖLGE"
-26,"Eskisehir","Eskişehir, Odunpazarı, ESKİŞEHİR BÖLGE"
-27,"Gaziantep","Gaziantep, Şahinbey, GAZİANTEP"
-28,"Giresun","Giresun, Merkez, GİRESUN"
-29,"Gumushane","Gümüşhane, Merkez, GÜMÜŞHANE"
-30,"Hakkari","Hakkari, Merkez, HAKKARİ"
-33,"Hatay","Hatay, Antakya, ANTAKYA"
-32,"Isparta","Isparta, Merkez, ISPARTA"
-33,"Mersin","Mersin, Yenişehir, MERSİN"
-34,"Istanbul","İstanbul, Şişli, ŞİŞLİ"
-35,"Izmir","İzmir, Konak, İZMİR BÖLGE"
-36,"Kars","Kars, Merkez, KARS"
-37,"Kastamonu","Kastamonu, Merkez, KASTAMONU"
-38,"Kayseri","Kayseri, Melikgazi, KAYSERİ BÖLGE"
-39,"Kirklareli","Kırklareli, Merkez, KIRKLARELİ"
-40,"Kirsehir","Kırşehir, Merkez, KIRŞEHİR"
-41,"Kocaeli","Kocaeli, İzmit, KOCAELİ"
-42,"Konya","Konya, Meram, KONYA BÖLGE"
-43,"Kutahya","Kütahya, Merkez, KÜTAHYA"
-44,"Malatya","Malatya, Merkez, MALATYA/KAYISI ARŞ. ENS."
-45,"Manisa","Manisa, Yunusemre, MANİSA"
-46,"Kahramanmaras","Kahramanmaraş, Onikişubat, KAHRAMANMARAŞ"
-47,"Mardin","Mardin, Kızıltepe, KIZILTEPE"
-48,"Mugla","Muğla, Menteşe, MUĞLA"
-49,"Mus","Muş, Merkez, MUŞ"
-50,"Nevsehir","Nevşehir, Merkez, NEVŞEHİR"
-51,"Nigde","Niğde, Merkez, NİĞDE"
-52,"Ordu","Ordu, Altınordu, ORDU"
-53,"Rize","Rize, Merkez, RİZE"
-54,"Sakarya","Sakarya, Adapazarı, SAKARYA"
-55,"Samsun","Samsun, Atakum, SAMSUN BÖLGE"
-56,"Siirt","Siirt, Merkez, SİİRT"
-57,"Sinop","Sinop, Merkez, SİNOP"
-58,"Sivas","Sivas, Merkez, SİVAS"
-59,"Tekirdag","Tekirdağ, Süleymanpaşa, TEKİRDAĞ"
-60,"Tokat","Tokat, Merkez, TOKAT"
-61,"Trabzon","Trabzon, Ortahisar, TRABZON BÖLGE"
-62,"Tunceli","Tunceli, Merkez, TUNCELİ"
-63,"Sanliurfa","Şanlıurfa, Haliliye, ŞANLIURFA"
-64,"Usak","Uşak, Merkez, UŞAK"
-65,"Van","Van, Edremit, VAN BÖLGE"
-66,"Yozgat","Yozgat, Merkez, YOZGAT"
-67,"Zonguldak","Zonguldak, Merkez, ZONGULDAK"
-68,"Aksaray","Aksaray, Merkez, AKSARAY"
-69,"Bayburt","Bayburt, Merkez, BAYBURT"
-70,"Karaman","Karaman, Merkez, KARAMAN"
-71,"Kirikkale","Kırıkkale, Merkez, KIRIKKALE"
-72,"Batman","Batman, Merkez, BATMAN"
-73,"Sirnak","Şırnak, Merkez, ŞIRNAK"
-74,"Bartin","Bartın, Merkez, BARTIN"
-75,"Ardahan","Ardahan, Merkez, ARDAHAN"
-76,"Igdir","Iğdır, Merkez, IĞDIR"
-77,"Yalova","Yalova, Merkez, YALOVA"
-78,"Karabuk","Karabük, Merkez, KARABÜK KAPULLU"
-79,"Kilis","Kilis, Merkez, KİLİS"
-80,"Osmaniye","Osmaniye, Merkez, OSMANİYE"
-81,"Duzce","Düzce, Merkez, DÜZCE"
+1,"Adana","Adana Seyhan, ADANA ŞAKİRPAŞA HAVALİMANI",non_kafz
+2,"Adiyaman","Adıyaman, Merkez, ADIYAMAN",kafz
+3,"Afyonkarahisar","Afyonkarahisar, Merkez, AFYONKARAHİSAR BÖLGE",non_kafz
+4,"Agr"i,"Ağrı, Merkez, AĞRI",non_kafz
+5,"Amasya","Amasya, Merkez, AMASYA",kafz
+6,"Ankara","Ankara, Çankaya, ÇANKAYA/TBMM",kafz
+7,"Antalya","Antalya, Muratpaşa, ANTALYA BÖLGE",non_kafz
+8,"Artvin","Artvin, Merkez, ARTVİN",kafz
+9,"Aydin","Aydın, Efeler, AYDIN",non_kafz
+10,"Balikesir","Balıkesir, Altıeylül, ALTIEYLÜL",non_kafz
+11,"Bilecik","Bilecik, Merkez, BİLECİK",non_kafz
+12,"Bingol","Bingöl, Merkez, BİNGÖL",kafz
+13,"Bitlis","Bitlis, Merkez, BİTLİS",kafz
+14,"Bolu","Bolu, Merkez, BOLU",kafz
+15,"Burdur","Burdur, Merkez, BURDUR",non_kafz
+16,"Bursa","Bursa, Nilüfer, NİLÜFER",non_kafz
+17,"Canakkale","Çanakkale, Merkez, ÇANAKKALE",non_kafz
+18,"Cankiri","Çankırı, Merkez, ÇANKIRI",kafz
+19,"Corum","Çorum, Merkez, ÇORUM",kafz
+20,"Denizli","Denizli, Pamukkale, DENİZLİ",kafz
+21,"Diyarbakir","Diyarbakır, Bağlar, DİYARBAKIR BÖLGE",non_kafz
+22,"Edirne","Edirne, Merkez, EDİRNE",non_kafz
+23,"Elazig","Elazığ, Merkez, ELAZIĞ BÖLGE",kafz
+24,"Erzincan","Erzincan, Merkez, ERZİNCAN",non_kafz
+25,"Erzurum","Erzurum, Yakutiye, ERZURUM BÖLGE",non_kafz
+26,"Eskisehir","Eskişehir, Odunpazarı, ESKİŞEHİR BÖLGE",non_kafz
+27,"Gaziantep","Gaziantep, Şahinbey, GAZİANTEP",kafz
+28,"Giresun","Giresun, Merkez, GİRESUN",non_kafz
+29,"Gumushane","Gümüşhane, Merkez, GÜMÜŞHANE",kafz
+30,"Hakkari","Hakkari, Merkez, HAKKARİ",kafz
+33,"Hatay","Hatay, Antakya, ANTAKYA",non_kafz
+32,"Isparta","Isparta, Merkez, ISPARTA",non_kafz
+33,"Mersin","Mersin, Yenişehir, MERSİN",non_kafz
+34,"Istanbul","İstanbul, Şişli, ŞİŞLİ",non_kafz
+35,"Izmir","İzmir, Konak, İZMİR BÖLGE",non_kafz
+36,"Kars","Kars, Merkez, KARS",kafz
+37,"Kastamonu","Kastamonu, Merkez, KASTAMONU",non_kafz
+38,"Kayseri","Kayseri, Melikgazi, KAYSERİ BÖLGE",kafz
+39,"Kirklareli","Kırklareli, Merkez, KIRKLARELİ",non_kafz
+40,"Kirsehir","Kırşehir, Merkez, KIRŞEHİR",kafz
+41,"Kocaeli","Kocaeli, İzmit, KOCAELİ",non_kafz
+42,"Konya","Konya, Meram, KONYA BÖLGE",non_kafz
+43,"Kutahya","Kütahya, Merkez, KÜTAHYA",non_kafz
+44,"Malatya","Malatya, Merkez, MALATYA/KAYISI ARŞ. ENS.",non_kafz
+45,"Manisa","Manisa, Yunusemre, MANİSA",non_kafz
+46,"Kahramanmaras","Kahramanmaraş, Onikişubat, KAHRAMANMARAŞ",kafz
+47,"Mardin","Mardin, Kızıltepe, KIZILTEPE",non_kafz
+48,"Mugla","Muğla, Menteşe, MUĞLA",non_kafz
+49,"Mus","Muş, Merkez, MUŞ",kafz
+50,"Nevsehir","Nevşehir, Merkez, NEVŞEHİR",kafz
+51,"Nigde","Niğde, Merkez, NİĞDE",kafz
+52,"Ordu","Ordu, Altınordu, ORDU",non_kafz
+53,"Rize","Rize, Merkez, RİZE",non_kafz
+54,"Sakarya","Sakarya, Adapazarı, SAKARYA",non_kafz
+55,"Samsun","Samsun, Atakum, SAMSUN BÖLGE",non_kafz
+56,"Siirt","Siirt, Merkez, SİİRT",non_kafz
+57,"Sinop","Sinop, Merkez, SİNOP",non_kafz
+58,"Sivas","Sivas, Merkez, SİVAS",kafz
+59,"Tekirdag","Tekirdağ, Süleymanpaşa, TEKİRDAĞ",non_kafz
+60,"Tokat","Tokat, Merkez, TOKAT",kafz
+61,"Trabzon","Trabzon, Ortahisar, TRABZON BÖLGE",non_kafz
+62,"Tunceli","Tunceli, Merkez, TUNCELİ",kafz
+63,"Sanliurfa","Şanlıurfa, Haliliye, ŞANLIURFA",non_kafz
+64,"Usak","Uşak, Merkez, UŞAK",non_kafz
+65,"Van","Van, Edremit, VAN BÖLGE",non_kafz
+66,"Yozgat","Yozgat, Merkez, YOZGAT",kafz
+67,"Zonguldak","Zonguldak, Merkez, ZONGULDAK",non_kafz
+68,"Aksaray","Aksaray, Merkez, AKSARAY",kafz
+69,"Bayburt","Bayburt, Merkez, BAYBURT",kafz
+70,"Karaman","Karaman, Merkez, KARAMAN",non_kafz
+71,"Kirikkale","Kırıkkale, Merkez, KIRIKKALE",kafz
+72,"Batman","Batman, Merkez, BATMAN",kafz
+73,"Sirnak","Şırnak, Merkez, ŞIRNAK",non_kafz
+74,"Bartin","Bartın, Merkez, BARTIN",non_kafz
+75,"Ardahan","Ardahan, Merkez, ARDAHAN",kafz
+76,"Igdir","Iğdır, Merkez, IĞDIR",non_kafz
+77,"Yalova","Yalova, Merkez, YALOVA",non_kafz
+78,"Karabuk","Karabük, Merkez, KARABÜK KAPULLU",non_kafz
+79,"Kilis","Kilis, Merkez, KİLİS",non_kafz
+80,"Osmaniye","Osmaniye, Merkez, OSMANİYE",kafz
+81,"Duzce","Düzce, Merkez, DÜZCE",non_kafz

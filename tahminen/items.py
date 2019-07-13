@@ -14,6 +14,7 @@ class MerkezItem(scrapy.Item):
   id = scrapy.Field()
   isimUzun = scrapy.Field()
   ilMerkezi = scrapy.Field()
+  kafz = scrapy.Field()
 
 #  def __repr__(self):
 #    return "Merkez([{0}:{1}:{2}:{3}])".format(self.plaka, self.isim, self.isimUzun, self.ilMerkezi)
