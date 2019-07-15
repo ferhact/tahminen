@@ -17,9 +17,15 @@ merkez_adi = ""
 def getvalueofnode(node):
     """ return node text or None """
     return node.text if node is not None else None
+
+# KAFZ illeri için merkez illeri csv dosyasından yükle
+df_iller = pd.read_csv('db/mgm/merkezler.csv',header=None,names=['id','isim','isimUzun','kafz'])
+df_iller_kafz = df_iller.loc[df_iller['kafz'] == 'kafz']
+df_iller_kafz = df_iller_kafz[['isim']]
+#print(df_iller_kafz)
  
 #dfcols = ['il', 'gun', 'gercek', '-1gun', '-2gun', '-3gun','-4gun','-5gun']
-dfcols = ['gun', 'max', 'max_gort', 'max_g', 'min', 'min_gort', 'min_g']
+dfcols = ['merkez_adi', 'gun', 'max', 'max_gort', 'max_g', 'min', 'min_gort', 'min_g', 'kafz', 'kayit_tarih']
 df_xml = pd.DataFrame(columns=dfcols)
 
 for filename in os.listdir(path):
@@ -27,7 +33,7 @@ for filename in os.listdir(path):
         # TODO: dosya 1 kere açılıp okunsun her merkez için açılmasın
         #for merkez in self.merkezler:
         root = etree.parse(path +'/'+ filename)
-        for merkezde_gunderece in root.xpath("item/merkezde_gunderece[merkez_id=34]"): 
+        for merkezde_gunderece in root.xpath("item/merkezde_gunderece"): 
             
             merkez_adi = getvalueofnode(merkezde_gunderece.find('merkez_adi'))
             kayit_tarih_temp = getvalueofnode(merkezde_gunderece.find('kayit_tarih'))
@@ -42,7 +48,7 @@ for filename in os.listdir(path):
                         gun = None
                     temp = getvalueofnode(value.find('max'))
                     if (temp!=None):
-                        max = int(temp)
+                        max = float(temp)
                     else:
                         max = None
                     temp = getvalueofnode(value.find('max_gort'))
@@ -57,7 +63,7 @@ for filename in os.listdir(path):
                         max_g = None
                     temp = getvalueofnode(value.find('min'))
                     if (temp!=None):
-                        min = int(temp)
+                        min = float(temp)
                     else:
                         min = None
                     temp = getvalueofnode(value.find('min_gort'))
@@ -70,25 +76,53 @@ for filename in os.listdir(path):
                         min_g = float(temp.replace(",", "."))
                     else:
                         min_g = None
-                    print(filename + "->" + str(kayit_tarih) + "->" + str(gun) + " -> " + str(max) + " -> [" + str(max_gort)+ "," +  str(max_g) + "]" + " -> " + str(min) + " -> [" + str(min_gort)+ "," +  str(min_g) + "]")
+                    #print(filename + "->" + str(kayit_tarih) + "->" + str(gun) + " -> " + str(max) + " -> [" + str(max_gort)+ "," +  str(max_g) + "]" + " -> " + str(min) + " -> [" + str(min_gort)+ "," +  str(min_g) + "]")
                     if (gun is not None):
                         diff = gun - kayit_tarih
                         if(diff.days == 0 ):
-                            df_xml = df_xml.append(pd.Series([gun, max, max_gort, max_g, min, min_gort, min_g], index=dfcols),ignore_index=True)
+                            kafz_val = False
+                            for name in df_iller_kafz['isim']:
+                                if name==merkez_adi:
+                                    kafz_val = True
+                            df_xml = df_xml.append(pd.Series([merkez_adi, gun, max, max_gort, max_g, min, min_gort, min_g, kafz_val, kayit_tarih], index=dfcols),ignore_index=True)
+#df_xml = df_xml.set_index(df_xml['gun'])
+#df_xml= df_xml.loc['2019-7-9 00:00:00':'2019-7-9 00:00:00']
+df_xml['max_dif'] = df_xml['max'] - df_xml['max_gort'] 
+df_xml['min_dif'] = df_xml['min'] - df_xml['min_gort'] 
+df_xml.to_csv('db/test/last_plot_data.csv')
 
-df_xml.sort_values(by='gun',inplace=True)
-print(df_xml)
-p = figure(plot_width=800, plot_height=400,x_axis_type="datetime", x_range=(datetime.strptime("08/07/2019", "%d/%m/%Y"), datetime.strptime("15/07/2019", "%d/%m/%Y")), y_range=(20, 40))
+print('--------------------')
+print('Tüm iller ortalaması ( 1GUNLUK_TAHMINEN )')
+print('--------------------')
+df_mean = df_xml.groupby('gun').mean() 
+print(df_mean)
+print('--------------------')
+
+# KAFZ illerinin verisini filtrele
+#df_xml_kafz = df_xml.loc[df_xml['merkez_adi'].isin(df_iller_kafz['isim'])]
+#df_xml_kafz.sort_values(['merkez_adi','gun'], ascending=[True, True])
+#print(df_xml)
+
+print('--------------------')
+print('KAFZ illeri ortalaması ( 1GUNLUK_TAHMINEN )')
+print('--------------------')
+df_xml_kafz = df_xml.loc[df_xml['kafz']]
+print(df_xml_kafz.sort_values(['max_dif'], ascending=[False]))
+df_mean_kafz = df_xml_kafz.groupby(['gun']).mean()
+print(df_mean_kafz)
+print('--------------------')
+
+p = figure(plot_width=1000, plot_height=400,x_axis_type="datetime", x_range=(datetime.strptime("08/07/2019", "%d/%m/%Y"), datetime.strptime("20/07/2019", "%d/%m/%Y")),  y_range=(20, 40))
 p.grid.minor_grid_line_color = '#eeeeee'
 #p.varea_stack(stackers=['max_gort', 'max_g'], x='gun', color=('grey','lightgrey'), legend=['Geçmiş en yüksek', 'Geçmiş En yüksek ort.'], source=df_xml)
 w = 12*60*60*1000 # half day in ms
-p.circle_x(x='gun', y='max', size=20, color="#DD1C77", fill_alpha=0.2, source=df_xml)
-p.circle_x(x='gun', y='min', size=20, color="blue", fill_alpha=0.2, source=df_xml)
-#p.vbar(x='gun', top='max', width=5000, bottom=0, color="blue", source=df_xml)
+p.circle_x(x='gun', y='max', size=20, color="#DD1C77", fill_alpha=0.2, source=df_mean_kafz,legend='KAFZ')
+p.circle_x(x='gun', y='max', size=20, color="blue", fill_alpha=0.2, source=df_mean,legend='Hepsi')
+#p.vbar(x='gun', top='max', width=5000, bottom=0, color="blue", source=df_mean)
 #p.line(x='gun', y='max_gort', color="red", source=df_xml)
-p.segment(x0='gun', y0='max_gort', x1='gun', y1='min_gort', color="black", source=df_xml)
+#p.segment(x0='gun', y0='max_gort', x1='gun', y1='min_gort', color="black", source=df_xml)
 t = Title()
-t.text = merkez_adi
+t.text = "KAFZ illeri / Merkez İlleri En Yüksek Sıcaklık Ortalaması" 
 p.title = t
 #p.vline_stack(stackers=['max','max_gort'] , x='gun', color=('red','blue') ,  source=df_xml)
 output_file('stacked_area.html')

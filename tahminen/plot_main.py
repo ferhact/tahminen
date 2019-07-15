@@ -29,7 +29,7 @@ def get_dataset(src, name, distribution):
     return ColumnDataSource(data=df)
 
 def make_plot(source, title):
-    plot = figure(x_axis_type="datetime", plot_width=800, tools="", toolbar_location=None)
+    plot = figure(x_axis_type="datetime", plot_width=800)
     plot.title.text = title
 
     plot.quad(top='record_max_temp', bottom='record_min_temp', left='left', right='right',
@@ -55,28 +55,28 @@ def update_plot(attrname, old, new):
     src = get_dataset(df, cities[city]['airport'], distribution_select.value)
     source.data.update(src.data)
 
-city = 'Austin'
+city = 'Antalya'
 distribution = 'Discrete'
 
 cities = {
-    'Austin': {
-        'airport': 'AUS',
-        'title': 'Austin, TX',
+    'Antalya': {
+        'airport': 'Antalya',
+        'title': 'Antalya, 07',
     },
-    'Boston': {
-        'airport': 'BOS',
-        'title': 'Boston, MA',
+    'Bolu': {
+        'airport': 'Bolu',
+        'title': 'Bolu, 14',
     },
-    'Seattle': {
-        'airport': 'SEA',
-        'title': 'Seattle, WA',
+    'Ankara': {
+        'airport': 'Ankara',
+        'title': 'Ankara, 06',
     }
 }
 
 city_select = Select(value=city, title='City', options=sorted(cities.keys()))
 distribution_select = Select(value=distribution, title='Distribution', options=['Discrete', 'Smoothed'])
 
-df = pd.read_csv(join(dirname(__file__), 'db/test/2015_weather.csv'))
+df = pd.read_csv(join(dirname(__file__), 'db/test/deneme.csv'))
 source = get_dataset(df, cities[city]['airport'], distribution)
 plot = make_plot(source, "Weather data for " + cities[city]['title'])
 

@@ -13,4 +13,6 @@ Kaynak: https://stackoverflow.com/questions/43537790/docker-fails-to-start-due-t
 ----
 TODO:
 1) Tahmin kaynağı tahmini ne zaman yaptığını bilmiyoruz. Sayfa ziyaret anı kayıt_tarih'te tahmin zaten yapılmıştı.
-2)
+2) xml dosya veri formatı versiyonunun veri <items> attribute olarak kaydı
+3) merkez item olarak kaydı 
+

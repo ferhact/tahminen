@@ -23,7 +23,7 @@ class MerkezdegunderecemgmSpider(scrapy.Spider):
                merkez['ilMerkezi'] = False
                if row[3]=='kafz':
                  merkez['kafz'] = True
-               else
+               else:
                  merkez['kafz'] = False
                self.merkezler.append(merkez)
                url = self.mgm_anaurl + '' + merkez['isim']
