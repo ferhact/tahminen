@@ -41,6 +41,7 @@ class MerkezdegunderecemgmSpider(scrapy.Spider):
             # splash_url='<url>',     # optional; overrides SPLASH_URL
             # slot_policy=scrapy_splash.SlotPolicy.PER_DOMAIN,  # optional
             )
+
    
   def convertDate(self, d_str):
       d_list = d_str.split()
@@ -133,7 +134,21 @@ class MerkezdegunderecemgmSpider(scrapy.Spider):
         }
 
       except Exception as e:
-        raise
+          print("EXXXX:" + str(e))
+          yield SplashRequest(response.url, callback = self.parse, 
+          args={
+          # optional; parameters passed to Splash HTTP API
+          'wait': 1,
+          'headers': {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'}
+
+          # 'url' is prefilled from request url
+          # 'http_method' is set to 'POST' for POST requests
+          # 'body' is set to request body for POST requests
+            },
+            # endpoint='render.json', # optional; default is render.html
+            # splash_url='<url>',     # optional; overrides SPLASH_URL
+            # slot_policy=scrapy_splash.SlotPolicy.PER_DOMAIN,  # optional
+            )
       else:
         pass
       finally:
