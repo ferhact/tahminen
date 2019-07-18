@@ -25,12 +25,13 @@ class MerkezdegunderecemgmSpider(scrapy.Spider):
                  merkez['kafz'] = True
                else:
                  merkez['kafz'] = False
-               self.merkezler.append(merkez)
+               self.merkezler.insert(merkez['id'], merkez)
                url = self.mgm_anaurl + '' + merkez['isim']
                yield SplashRequest(url, callback = self.parse, 
           args={
           # optional; parameters passed to Splash HTTP API
           'wait': 1,
+          'headers': {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'}
 
           # 'url' is prefilled from request url
           # 'http_method' is set to 'POST' for POST requests
@@ -56,7 +57,10 @@ class MerkezdegunderecemgmSpider(scrapy.Spider):
       return 0
 
   def parse(self, response):
-       
+
+      if response.status != 200:
+        return False
+
       mgd = MerkezdeGundereceItem()
        
       try:
@@ -123,6 +127,7 @@ class MerkezdegunderecemgmSpider(scrapy.Spider):
 
         mgd['gunderece'] = [gd1,gd2,gd3,gd4,gd5]
 
+        
         yield {
           'merkezde_gunderece' : mgd, 
         }
